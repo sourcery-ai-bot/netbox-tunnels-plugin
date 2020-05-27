@@ -1,4 +1,4 @@
-"""Administrative capabilities for netbox_tunnels plugin.
+"""Plugin declaration for netbox_tunnels.
 (c) 2020 Justin Drew
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -10,17 +10,23 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-from django.contrib import admin
-from .models import Tunnel
+
+from extras.plugins import PluginConfig
 
 
-@admin.register(Tunnel)
-class TunnelAdmin(admin.ModelAdmin):
-    """Administrative view for managing Tunnel instances."""
+class TunnelConfig(PluginConfig):
+    """This class defines attributes for the NetBox Tunnels Plugin."""
 
-    list_display = (
-        "tunnel_id",
-        "name",
-        "status",
-        "context"
-    )
+    name = 'netbox_tunnels'
+    verbose_name = 'Tunnels'
+    description = 'Netbox Tunnels'
+    version = '0.2.3'
+    base_url = 'tunnels'
+    author = 'Justin Drew'
+    author_email = 'jdrew82@gmail.com'
+    required_settings = []
+    default_settings = {}
+    caching_config = {}
+
+
+config = TunnelConfig
