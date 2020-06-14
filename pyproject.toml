@@ -2,7 +2,7 @@
 name = "netbox-tunnels-plugin"
 version = "0.3.3"
 description = "A plugin for Netbox to document network tunnels"
-authors = ["Justin Drew <jdrew82@gmail.com>"]
+authors = ["Justin Drew <justin.drew@networktocode.com>"]
 license = "Apache-2.0"
 readme = "README.md"
 homepage = "https://github.com/jdrew82/netbox-tunnels-plugin"

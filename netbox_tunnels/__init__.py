@@ -26,7 +26,7 @@ class TunnelsConfig(PluginConfig):
     description = "Network Tunnels"
     base_url = "netbox_tunnels"
     author = "Justin Drew"
-    author_email = "jdrew82@gmail.com"
+    author_email = "justin.drew@networktocode.com"
     min_version = "2.8.3"
     required_settings = []
     # default_settings = {}
