@@ -97,7 +97,6 @@ class TunnelCreationCSVForm(CustomFieldModelCSVForm):
 
     def save(self, commit=True, **kwargs):
         """Save the model, and add it and the associated PSK."""
-        model = super().save(commit=commit, **kwargs)
         # if commit:
         #     credentials = Credentials(self.data.get("psk"))
-        return model
+        return super().save(commit=commit, **kwargs)
